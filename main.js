@@ -21,13 +21,12 @@ const CONFIG = {
 	portraitCaption: "// somewhere in the city",
 
 	links: {
-		portraitLink: "https://www.openstreetmap.org/",
 		chat: "#contact",
 	},
 
 	socials: [
 		{ label: "email", href: "mailto:jrougew@gmail.com", icon: "mail" },
-		// { label: "github", href: "https://github.com/<username>", icon: "github" },
+		{ label: "github", href: "https://github.com/untraitful", icon: "github" },
 	],
 
 	ticker: {
