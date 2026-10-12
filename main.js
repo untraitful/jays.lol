@@ -3,13 +3,13 @@
    Colours live in styles.css (:root).
    ========================================================= */
 const CONFIG = {
-	name: "[name]",
-	city: "[CITY]",
+	name: "jay",
+	city: "Detroit",
 	status: "open to work",
 	email: "hello@example.com",
 	bio: [
-		"[BIO] i build small, sturdy things for the terminal and the web — tools that respect your privacy and run on hardware you own.",
-		"[BIO] currently tinkering with rust, linux and self-hosted infrastructure. previously: something interesting at somewhere interesting.",
+		"i attempt to build things that work. every once in a while, they do.",
+		"current project: a homelab.",
 	],
 
 	images: {
@@ -17,7 +17,7 @@ const CONFIG = {
 		strip: [
 			{ src: "images/strip-1.jpg", alt: "[ALT] street at night, lit by a camera flash", caption: "fig. 01" },
 			{ src: "images/strip-2.jpg", alt: "[ALT] desk with a mechanical keyboard and a terminal", caption: "fig. 02" },
-			{ src: "images/strip-3.jpg", alt: "[ALT] rooftops of [CITY] at dusk", caption: "fig. 03" },
+			{ src: "images/strip-3.jpg", alt: "[ALT] rooftops of Detroit at dusk", caption: "fig. 03" },
 		],
 	},
 	portraitCaption: "// somewhere in the city",
@@ -38,10 +38,10 @@ const CONFIG = {
 
 	ticker: {
 		top: ["open to work", "rust", "linux", "self-hosted", "privacy first", "terminal native"],
-		bottom: ["stay curious", "ship small things", "read the manual", "made in [CITY]", "no trackers"],
+		bottom: ["stay curious", "ship small things", "read the manual", "made in detroit", "no trackers"],
 	},
 
-	wordmark: ["[Name] & Co.", "Est. MMXXVI"],
+	wordmark: ["Jay & Co.", "Est. MMXXVI"],
 
 	about: {
 		left: "No. 001\nPrinted on recycled pixels",
