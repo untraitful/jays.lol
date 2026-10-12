@@ -6,7 +6,7 @@ const CONFIG = {
 	name: "jay",
 	city: "Detroit",
 	status: "open to work",
-	email: "hello@example.com",
+	email: "jrougew@gmail.com",
 	bio: [
 		"i attempt to build things that work. every once in a while, they do.",
 		"current project: a homelab.",
@@ -14,26 +14,20 @@ const CONFIG = {
 
 	images: {
 		portrait: "images/pfp.jpg",
-		strip: [
-			{ src: "images/strip-1.jpg", alt: "[ALT] street at night, lit by a camera flash", caption: "fig. 01" },
-			{ src: "images/strip-2.jpg", alt: "[ALT] desk with a mechanical keyboard and a terminal", caption: "fig. 02" },
-			{ src: "images/strip-3.jpg", alt: "[ALT] rooftops of Detroit at dusk", caption: "fig. 03" },
-		],
+		/* full-bleed photo strip — add { src, alt, caption } entries to show it, e.g.
+		   { src: "images/strip-1.jpg", alt: "street at night, lit by a camera flash", caption: "fig. 01" } */
+		strip: [],
 	},
 	portraitCaption: "// somewhere in the city",
 
 	links: {
 		portraitLink: "https://www.openstreetmap.org/",
-		cv: "cv.pdf",
-		rss: "/rss.xml",
-		blogIndex: "#blog",
 		chat: "#contact",
 	},
 
 	socials: [
-		{ label: "github", href: "https://github.com/[username]", icon: "github" },
-		{ label: "email", href: "mailto:hello@example.com", icon: "mail" },
-		{ label: "rss", href: "/rss.xml", icon: "rss" },
+		{ label: "email", href: "mailto:jrougew@gmail.com", icon: "mail" },
+		// { label: "github", href: "https://github.com/<username>", icon: "github" },
 	],
 
 	ticker: {
@@ -46,47 +40,24 @@ const CONFIG = {
 	about: {
 		left: "No. 001\nPrinted on recycled pixels",
 		right: "Hand-set in\nmonospace",
-		statement: "[ABOUT] I make quiet software for loud people — fast tools, small binaries, and systems you can actually understand.",
+		statement: "I build things, break them, and build them again until they work. Right now that means a homelab in Detroit.",
 	},
 
 	divider: "+ Dispatches + Field notes + Logs +",
 
 	projects: [
 		{
-			name: "project-one",
-			desc: "[PROJECT] a tiny, fast thing that does one job well.",
-			tags: ["rust", "cli"],
+			name: "homelab",
+			desc: "self-hosted servers at home. a permanent work in progress.",
+			tags: ["linux", "self-hosted"],
 			year: 2026,
-			links: [{ label: "src", href: "https://github.com/" }, { label: "live", href: "#" }],
-		},
-		{
-			name: "project-two",
-			desc: "[PROJECT] self-hosted dashboard for your homelab.",
-			tags: ["go", "docker", "linux"],
-			year: 2025,
-			links: [{ label: "src", href: "https://github.com/" }],
-		},
-		{
-			name: "project-three",
-			desc: "[PROJECT] privacy-first analytics with zero cookies.",
-			tags: ["typescript", "sqlite"],
-			year: 2025,
-			links: [{ label: "src", href: "https://github.com/" }, { label: "live", href: "#" }],
-		},
-		{
-			name: "dotfiles",
-			desc: "[PROJECT] my shell, editor and window manager config.",
-			tags: ["nix", "lua"],
-			year: 2024,
-			links: [{ label: "src", href: "https://github.com/" }],
+			links: [],
 		},
 	],
 
+	/* href is optional — posts without one render as plain lines */
 	posts: [
-		{ date: "2026-10-01", title: "post-title.md", href: "#", read: "4 min" },
-		{ date: "2026-09-14", title: "self-hosting-on-a-budget.md", href: "#", read: "7 min" },
-		{ date: "2026-08-02", title: "why-i-switched-to-rust.md", href: "#", read: "5 min" },
-		{ date: "2026-06-21", title: "notes-on-dithering.md", href: "#", read: "3 min" },
+		{ date: "2026-10-12", title: "working-on-the-site.md", read: "1 min" },
 	],
 
 	contact: {
@@ -236,10 +207,10 @@ function renderPosts() {
 	if (!list) return;
 	list.replaceChildren(
 		...CONFIG.posts.map((post) =>
-			el("li", {}, el("a", { href: post.href }, [
+			el("li", {}, el(post.href ? "a" : "div", post.href ? { href: post.href, class: "post" } : { class: "post" }, [
 				el("time", { datetime: post.date, text: post.date }),
 				el("span", { class: "post__title", text: post.title }),
-				el("span", { class: "muted", text: post.read }),
+				el("span", { class: "muted", text: post.read || "" }),
 			])),
 		),
 	);
@@ -248,6 +219,10 @@ function renderPosts() {
 function renderStrip() {
 	const grid = $("[data-strip]");
 	if (!grid) return;
+	if (!CONFIG.images.strip.length) {
+		grid.closest(".strip").hidden = true;
+		return;
+	}
 	grid.replaceChildren(
 		...CONFIG.images.strip.map((img, i) => {
 			const photo = el("img", { class: "photo", src: img.src, alt: img.alt, loading: "lazy", decoding: "async" });

@@ -630,7 +630,8 @@ button, input { font: inherit; color: inherit; }
 /* ---- blog ---- */
 .posts { border-top: 1px dashed var(--line); margin-bottom: 20px; }
 .posts li { border-bottom: 1px dashed var(--line); }
-.posts a {
+.posts { margin-bottom: 0; }
+.posts .post {
   display: grid;
   grid-template-columns: 11ch minmax(0, 1fr) auto;
   gap: 4px 24px;
@@ -927,7 +928,7 @@ button, input { font: inherit; color: inherit; }
     padding: 12px 6px;
   }
 
-  .posts a {
+  .posts .post {
     grid-template-columns: minmax(0, 1fr) auto;
     padding: 12px 6px;
   }
