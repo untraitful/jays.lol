@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jayden Worden</title>
+  <meta name="description" content="Jayden Worden runs a homelab built from scratch, prints his own server rack and is learning Rust for systems and DevOps.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Set the theme before first paint so there is no flash
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b1a2b'/%3E%3Crect x='6' y='13' width='6' height='6' fill='%238fd0ff'/%3E%3Crect x='14' y='13' width='6' height='6' fill='%23fffdf7'/%3E%3Crect x='22' y='13' width='4' height='6' fill='%235ad15a'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="glow" aria-hidden="true"></div>
+
+  <div class="site">
+    <header class="nav">
+      <a class="nav__mark" href="#top" aria-label="Jayden Worden, back to top">~/jay</a>
+      <nav aria-label="Sections">
+        <ul class="nav__links">
+          <li><a href="#about">about</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme" type="button" aria-label="Switch to dark theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/></svg>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero chapter" id="top" data-chapter="hero">
+        <canvas class="hero__leds" aria-hidden="true"></canvas>
+        <p class="hero__hello">hi, welcome to my corner of the web</p>
+        <h1 class="hero__title" aria-label="Jayden Worden">
+          <span class="hero__line hero__line--a" aria-hidden="true"><span style="--i:0">J</span><span style="--i:1">a</span><span style="--i:2">y</span><span style="--i:3">d</span><span style="--i:4">e</span><span style="--i:5">n</span></span>
+          <span class="hero__line hero__line--b" aria-hidden="true"><span style="--i:6">W</span><span style="--i:7">o</span><span style="--i:8">r</span><span style="--i:9">d</span><span style="--i:10">e</span><span style="--i:11">n</span></span>
+        </h1>
+        <div class="hero__foot">
+          <p class="hero__tag">Self-taught homelabber, learning Rust for systems and DevOps.</p>
+          <div class="hero__actions">
+            <a class="btn btn--fill magnetic" href="#projects">View projects</a>
+            <a class="btn btn--line magnetic" href="#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills" aria-labelledby="skills-h">
+        <h2 id="skills-h" class="skills__label">running on</h2>
+        <div class="skills__strip">
+          <div class="marquee">
+            <ul class="marquee__set">
+              <li>Debian</li><li>Linux</li><li>Docker</li><li>Dockge</li><li>Rust</li><li>Jellyfin</li><li>Navidrome</li><li>AdGuard Home</li><li>Cloudflare Tunnel</li><li>Twingate</li><li>SearXNG</li><li>Kiwix</li><li>CAD</li><li>Bambu A1</li><li>Android</li>
+            </ul>
+            <ul class="marquee__set" aria-hidden="true">
+              <li>Debian</li><li>Linux</li><li>Docker</li><li>Dockge</li><li>Rust</li><li>Jellyfin</li><li>Navidrome</li><li>AdGuard Home</li><li>Cloudflare Tunnel</li><li>Twingate</li><li>SearXNG</li><li>Kiwix</li><li>CAD</li><li>Bambu A1</li><li>Android</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="about chapter" id="about" data-chapter="paper" aria-labelledby="about-h">
+        <h2 id="about-h" class="h-sec reveal">about me</h2>
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p class="about__bio">I’m Jay. I run a homelab I built from scratch, and a lot of chores along with it. I spend my time experimenting with Linux, and I’m learning Rust to go deeper into systems and DevOps.</p>
+            <div class="about__lists">
+              <div>
+                <h3 class="h-sub">interests</h3>
+                <ul class="bullets">
+                  <li>Self-hosting <span>seven services and counting</span></li>
+                  <li>Linux <span>Debian on the server</span></li>
+                  <li>Networking <span>Twingate, Cloudflare</span></li>
+                  <li>3D printing and CAD <span>Bambu A1</span></li>
+                  <li>Media servers <span>Jellyfin, Navidrome</span></li>
+                  <li>Retro games <span>my own game server</span></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="h-sub">currently learning</h3>
+                <ul class="bullets">
+                  <li>Rust <span>for systems work</span></li>
+                  <li>Ownership and lifetimes <span>the hard part</span></li>
+                  <li>DevOps practice <span>CI, automation</span></li>
+                  <li>Container networking <span>Docker</span></li>
+                  <li>Rack design in CAD <span>10″ format</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <aside class="facts reveal" aria-label="Quick facts">
+            <p class="facts__title">quick facts</p>
+            <dl>
+              <div><dt>name</dt><dd>Jayden “Jay” Worden</dd></div>
+              <div><dt>server</dt><dd>Debian + Docker</dd></div>
+              <div><dt>stacks</dt><dd>managed in Dockge</dd></div>
+              <div><dt>printer</dt><dd>Bambu A1</dd></div>
+              <div><dt>learning</dt><dd>Rust</dd></div>
+              <div><dt>status</dt><dd><span class="dot" aria-hidden="true"></span>printing rack parts</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="projects chapter" id="projects" data-chapter="sage" aria-labelledby="projects-h">
+        <div class="projects__head">
+          <div>
+            <h2 id="projects-h" class="h-sec reveal">projects</h2>
+            <p class="projects__note reveal">Three builds from my lab: one running, one on the printer, one still on paper.</p>
+          </div>
+          <div class="projects__controls">
+            <button class="ctl magnetic" type="button" data-dir="-1" aria-label="Previous project">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+            </button>
+            <button class="ctl magnetic" type="button" data-dir="1" aria-label="Next project">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Projects, use the arrow keys to scroll">
+          <ul class="track__list">
+            <li class="card" aria-labelledby="p1">
+              <div class="card__media card__media--stack" aria-hidden="true">
+                <div class="dock">
+                  <p class="dock__title">stacks <span>7 running</span></p>
+                  <ul>
+                    <li><i></i>jellyfin<span>:8096</span></li>
+                    <li><i></i>navidrome<span>:4533</span></li>
+                    <li><i></i>adguard-home<span>:53</span></li>
+                    <li><i></i>seerr<span>:5055</span></li>
+                    <li><i></i>searxng<span>:8080</span></li>
+                    <li><i></i>kiwix<span>:8181</span></li>
+                    <li><i></i>retro-games<span>:80</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__body">
+                <h3 id="p1" class="card__title">Homelab</h3>
+                <div class="card__meta"><p class="status status--live"><i aria-hidden="true"></i>Live</p><p class="card__kind">Infrastructure</p></div>
+                <p class="card__desc">A Debian server running Docker stacks in Dockge: Jellyfin, Navidrome, AdGuard Home, Seerr, SearXNG, Kiwix and a retro game server. Remote access goes through Twingate, with public services behind a Cloudflare Tunnel.</p>
+                <ul class="tech" aria-label="Built with"><li>Debian</li><li>Docker</li><li>Cloudflare</li><li>Twingate</li></ul>
+              </div>
+            </li>
+
+            <li class="card" aria-labelledby="p2">
+              <div class="card__media card__media--rack" aria-hidden="true">
+                <svg viewBox="0 0 320 240" class="rack">
+                  <rect x="70" y="14" width="180" height="212" class="rack__frame"/>
+                  <rect x="80" y="20" width="160" height="200" class="rack__inner"/>
+                  <!-- 1U patch panel -->
+                  <rect x="84" y="24" width="152" height="28" class="rack__unit"/>
+                  <g class="rack__ports"><rect x="94" y="33" width="10" height="10"/><rect x="110" y="33" width="10" height="10"/><rect x="126" y="33" width="10" height="10"/><rect x="142" y="33" width="10" height="10"/><rect x="168" y="33" width="10" height="10"/><rect x="184" y="33" width="10" height="10"/><rect x="200" y="33" width="10" height="10"/><rect x="216" y="33" width="10" height="10"/></g>
+                  <!-- 1U switch -->
+                  <rect x="84" y="56" width="152" height="28" class="rack__unit rack__unit--dark"/>
+                  <g class="rack__leds"><rect x="94" y="66" width="6" height="6"/><rect x="108" y="66" width="6" height="6"/><rect x="122" y="66" width="6" height="6"/><rect x="136" y="66" width="6" height="6"/><rect x="150" y="66" width="6" height="6"/><rect x="164" y="66" width="6" height="6"/><rect x="178" y="66" width="6" height="6"/><rect x="192" y="66" width="6" height="6"/></g>
+                  <!-- 2U ThinkCentre Tiny shelf -->
+                  <rect x="84" y="88" width="152" height="60" class="rack__unit"/>
+                  <rect x="100" y="104" width="86" height="34" class="rack__pc"/>
+                  <rect x="108" y="118" width="6" height="6" class="rack__power"/>
+                  <!-- 1U custom insert: thin client and travel router -->
+                  <rect x="84" y="152" width="152" height="28" class="rack__unit rack__unit--print"/>
+                  <rect x="94" y="158" width="60" height="16" class="rack__pc"/>
+                  <rect x="166" y="158" width="40" height="16" class="rack__pc"/>
+                  <!-- 1U still printing -->
+                  <rect x="84" y="184" width="152" height="32" class="rack__unit rack__unit--empty"/>
+                  <rect x="84" y="184" width="152" height="12" class="rack__printing"/>
+                </svg>
+              </div>
+              <div class="card__body">
+                <h3 id="p2" class="card__title">10″ Mini Rack</h3>
+                <div class="card__meta"><p class="status status--progress"><i aria-hidden="true"></i>In progress</p><p class="card__kind">Hardware · 3D print</p></div>
+                <p class="card__desc">A 6U, 10-inch rack I’m printing myself on a Bambu A1. It holds a patch panel, an 8-port managed switch, a ThinkCentre Tiny and a custom 1U insert for a thin client and a travel router.</p>
+                <ul class="tech" aria-label="Built with"><li>CAD</li><li>Bambu A1</li><li>Linux</li></ul>
+              </div>
+            </li>
+
+            <li class="card" aria-labelledby="p3">
+              <div class="card__media card__media--phone" aria-hidden="true">
+                <div class="phone">
+                  <div class="phone__tile phone__tile--a">Video</div>
+                  <div class="phone__tile phone__tile--b">Music</div>
+                  <div class="phone__tile phone__tile--c">Books</div>
+                  <div class="phone__tile phone__tile--d">Terminal</div>
+                </div>
+              </div>
+              <div class="card__body">
+                <h3 id="p3" class="card__title">Homelab App</h3>
+                <div class="card__meta"><p class="status status--planned"><i aria-hidden="true"></i>Planned</p><p class="card__kind">Android</p></div>
+                <p class="card__desc">One Android app for everything the lab serves: Jellyfin video, Navidrome music, e-reading and a terminal. All of it in one place instead of five apps.</p>
+                <ul class="tech" aria-label="Built with"><li>Android</li><li>Jellyfin API</li><li>Subsonic API</li></ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+      </section>
+
+      <section class="contact chapter" id="contact" data-chapter="ink" aria-labelledby="contact-h">
+        <h2 id="contact-h" class="h-sec reveal">contact</h2>
+        <div class="contact__box reveal">
+          <p class="contact__lead">Hiring, a project to build together, or a homelab question? Write to me, I read everything.</p>
+          <p class="contact__address" id="email">trait@<wbr>dweeb.email</p>
+          <div class="contact__actions">
+            <button class="btn btn--fill magnetic copy" type="button" aria-describedby="email">Copy email</button>
+            <a class="btn btn--line magnetic" href="mailto:trait@dweeb.email?subject=Hello%20Jay">Write an email</a>
+            <span class="copy__status" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+        <ul class="contact__links reveal">
+          <li><a href="https://github.com/untraitly" rel="me noopener" target="_blank">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a> <span>untraitly</span></li>
+          <!-- TODO: replace with your Discord profile link -->
+          <li><a href="https://discord.com/users/YOUR_DISCORD_ID" rel="noopener" target="_blank">Discord<span class="visually-hidden"> (opens in a new tab)</span></a> <span>say hi</span></li>
+          <!-- TODO: replace with your LinkedIn profile link -->
+          <li><a href="https://www.linkedin.com/in/YOUR_LINKEDIN" rel="me noopener" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a> <span>the formal one</span></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="badges" aria-label="Site badges">
+        <li class="badge"><b>debian</b><span>powered</span></li>
+        <li class="badge badge--b"><b>made</b><span>by hand</span></li>
+        <li class="badge badge--c"><b>no</b><span>frameworks</span></li>
+        <li class="badge badge--d"><b>learning</b><span>rust</span></li>
+        <li class="badge badge--e"><b>self</b><span>hosted</span></li>
+      </ul>
+      <div class="footer__row">
+        <p>© <span class="year">2026</span> Jayden Worden · hand-written HTML, CSS and JS</p>
+        <a href="#top">back to top ↑</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
